@@ -1,0 +1,26 @@
+# Home Assistant runtime data
+secrets.yaml
+.storage/
+.cloud/
+.tts_cache/
+deps/
+*.db
+*.db-journal
+*.log
+home-assistant_v2.db*
+home-assistant.log*
+
+# Local development
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+
+# Editors / OS
+.DS_Store
+Thumbs.db
+.idea/
