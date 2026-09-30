@@ -1,0 +1,39 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Kilo AI",
+        "description": "Connect the Kilo AI Gateway (API key from app.kilo.ai).",
+        "data": {
+          "base_url": "Base URL",
+          "api_key": "API key",
+          "model": "Model"
+        }
+      },
+      "reconfigure": {
+        "title": "Kilo AI - reconfigure",
+        "data": {
+          "base_url": "Base URL",
+          "api_key": "API key",
+          "model": "Model"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Cannot reach the gateway or the API key is invalid."
+    },
+    "abort": {
+      "already_configured": "This connection is already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Kilo AI - model",
+        "data": {
+          "model": "Model"
+        }
+      }
+    }
+  }
+}

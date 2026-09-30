@@ -1,0 +1,39 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Kilo AI",
+        "description": "Připojte Kilo AI Gateway (API klíč z app.kilo.ai).",
+        "data": {
+          "base_url": "Base URL",
+          "api_key": "API klíč",
+          "model": "Model"
+        }
+      },
+      "reconfigure": {
+        "title": "Kilo AI - změna připojení",
+        "data": {
+          "base_url": "Base URL",
+          "api_key": "API klíč",
+          "model": "Model"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Nelze se připojit ke gatewayi nebo je neplatný API klíč."
+    },
+    "abort": {
+      "already_configured": "Toto připojení je již nastaveno."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Kilo AI - model",
+        "data": {
+          "model": "Model"
+        }
+      }
+    }
+  }
+}
