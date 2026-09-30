@@ -1,0 +1,52 @@
+---
+# Registr místností — zdroj pravdy pro první segment entity_id.
+#
+# Tento soubor NENÍ součástí konfigurace Home Assistant (automaticky se nepřipojuje
+# přes !include). Slouží jako:
+#   * seznam místností pro validátor scripts/validate_entity_ids.py;
+#   * podklad pro generátor názvů (docs/prompts/naming.md);
+#   * mapování `id` (entity_id / názvy) → `name` (český popisek v UI).
+#
+# `id` je anglický snake_case bez diakritiky a musí odpovídat prvnímu segmentu
+# zařízení v entity_id. `name` je český popisek, který se zobrazí v UI.
+# `aliases` jsou další české/anglické podoby pro hlasové asistenty a vyhledávání.
+
+# id:               obyvaci_pokoj
+# name:             Obývací pokoj
+# aliases:          [living room, obývák, salon]
+
+# id:               kuchyn
+# name:             Kuchyň
+# aliases:          [kitchen, kuchyňa]
+
+# id:               loznice
+# name:             Ložnice
+# aliases:          [bedroom, ložnice master]
+
+# id:               detsky_pokoj
+# name:             Dětský pokoj
+# aliases:          [kids room, dětský]
+
+# id:               koupelna
+# name:             Koupelna
+# aliases:          [bathroom, kúpeľňa]
+
+# id:               chodba
+# name:             Chodba
+# aliases:          [hallway, chodba, predsieň]
+
+# id:               garaz
+# name:             Garáž
+# aliases:          [garage, garáž]
+
+# id:               sklep
+# name:             Sklep
+# aliases:          [basement, cellar, sklep]
+
+# id:               zahrada
+# name:             Zahrada
+# aliases:          [garden, zahrada, dvorek]
+
+# id:               venkovni
+# name:             Venkovní prostory
+# aliases:          [outdoor, exteriér, venku]

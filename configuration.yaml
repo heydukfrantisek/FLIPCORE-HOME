@@ -1,0 +1,37 @@
+---
+# Kořenová konfigurace Home Assistant.
+# Zásady:
+#   * tento soubor neobsahuje entity, skupiny ani automatizace — jen include direktivy;
+#   * `homeassistant.packages` slouží jako "balíčky" (packages/*.yaml), které lze zapnout/vypnout;
+#   * `automation:`, `script:`, `scene:` jsou seznamy, proto se includují z vlastních adresářů.
+# Podrobnosti v docs/structure.md, standard názvů v docs/naming.md.
+
+default_config:
+
+homeassistant:
+  packages: !include_dir_merge_named packages
+  name: FLIPCORE-HOME
+  unit_system: metric
+  customize: !include_dir_merge_list packages/customize
+  allowlist_external_dirs: []
+
+lovelace:
+  mode: yaml
+  dashboards: !include_dir_merge_named packages/dashboards
+
+automation: !include_dir_list automations
+script: !include_dir_merge_named scripts
+scene: !include_dir_list scenes
+
+logger:
+  default: info
+  logs:
+    homeassistant.components.mqtt: debug
+    esphome: warning
+
+http:
+  use_x_forwarded_for: true
+  trusted_proxies:
+    - 10.0.0.0/8
+    - 172.16.0.0/12
+    - 192.168.0.0/16
